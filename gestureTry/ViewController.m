@@ -14,8 +14,12 @@
     int countBottom;
 }
 @property (nonatomic,strong) NSString* Winner;
-@property (nonatomic,strong) UIImageView* BottomView;
-@property (nonatomic,strong) UIImageView* TopView;
+@property (nonatomic,strong) UIView* BottomView;
+@property (nonatomic,strong) UIView* TopView;
+@property (nonatomic,strong) UIImageView* BottomViewImage;
+@property (nonatomic,strong) UIImageView* TopViewImage;
+
+
 @end
 
 @implementation ViewController
@@ -52,7 +56,7 @@
             }
             else
             {
-               self.TopView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.png",countTop]];  
+               self.TopViewImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.png",countTop]];
             }
         }
     }
@@ -77,7 +81,7 @@
             }
             else
             {
-                self.BottomView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.png",countBottom]];
+                self.BottomViewImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.png",countBottom]];
             }
         }
     }
@@ -93,20 +97,25 @@
     countTop = 0;
     CGRect bottomRect;
     bottomRect.size.width = WIDTH_BOUNDS;
-    bottomRect.size.height = HEIGHT_BOUNDS;
+    bottomRect.size.height = HEIGHT_HALF;
     bottomRect.origin.x = 0;
     bottomRect.origin.y = HEIGHT_HALF;
-    self.BottomView= [[UIImageView alloc]initWithFrame:bottomRect]; 
-    self.BottomView.image = [UIImage imageNamed:@"4.png"];
+    self.BottomView= [[UIView alloc]initWithFrame:bottomRect];
+    self.BottomViewImage = [[UIImageView alloc]initWithFrame:bottomRect];
+    self.BottomViewImage.image = [UIImage imageNamed:@"4.png"];
     [self.view addSubview:self.BottomView];
+    [self.view addSubview:self.BottomViewImage];
     CGRect topRect;
     topRect.size.width = WIDTH_BOUNDS;
-    topRect.size.height = HEIGHT_BOUNDS ;
+    topRect.size.height = HEIGHT_HALF;
     topRect.origin.x = 0;
-    topRect.origin.y = -HEIGHT_HALF;
-    self.TopView= [[UIImageView alloc]initWithFrame:topRect];
-    self.TopView.image = [UIImage imageNamed:@"0.png"];
+    topRect.origin.y = 0;
+    self.TopView= [[UIView alloc]initWithFrame:topRect];
+    self.TopViewImage = [[UIImageView alloc]initWithFrame:topRect];
+    self.TopViewImage.image = [UIImage imageNamed:@"0.png"];
     [self.view addSubview:self.TopView];
+    [self.view addSubview:self.TopViewImage];
+
 }
 - (void)viewDidLoad
 {

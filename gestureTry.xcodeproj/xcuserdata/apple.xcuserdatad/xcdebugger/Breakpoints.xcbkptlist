@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "gestureTry/ViewController.m"
-         timestampString = "387009074.196276"
+         timestampString = "387019769.071992"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "107"
-         endingLineNumber = "107"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
          landmarkName = "-loadViews"
          landmarkType = "5">
       </FileBreakpoint>
