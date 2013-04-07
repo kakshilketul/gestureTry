@@ -8,120 +8,116 @@
 
 #import "ViewController.h"
 #import "WinnerViewController.h"
-
 @interface ViewController ()
+{
+    int countTop;
+    int countBottom;
+}
 @property (nonatomic,strong) NSString* Winner;
-@property (nonatomic,strong) UIView* ViewYellow;
-@property (nonatomic,strong) UIView* ViewRed;
+@property (nonatomic,strong) UIImageView* BottomView;
+@property (nonatomic,strong) UIImageView* TopView;
 @end
 
 @implementation ViewController
 
 @synthesize Winner = _Winner;
 
+#define MIN_VALUE 0;
+#define MAX_VALUE 4;
+
  -(void) addGesture
 {
-    [self.ViewRed addGestureRecognizer :[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(redpan:)]];
-   [self.ViewYellow addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(yellowpan:)]];
+    [self.TopView addGestureRecognizer :[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(toppan:)]];
+   [self.BottomView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(bottompan:)]];
 }
 
 
 
 
-- (void) redpan:(UIPanGestureRecognizer *)recognizer
+- (void) toppan:(UIPanGestureRecognizer *)recognizer
 {
     CGPoint start;
     start.x = 0;
     start.y = 0;
     if (recognizer.state == UIGestureRecognizerStateBegan ) {
-        start = [recognizer translationInView:self.ViewRed];
+        start = [recognizer translationInView:self.TopView];
     }
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint end = [recognizer translationInView:self.ViewRed];
-        if ((start.y - end.y) <= 1) {
-            CGRect yellowRect = self.ViewYellow.frame;
-            CGRect redRect = self.ViewRed.frame;
-            if (yellowRect.origin.y > 410 ) {
-                self.Winner = @"Red";
-                NSLog(@"Segue");
-                [self performSegueWithIdentifier:@"MainSegue" sender:self.Winner];
+        CGPoint end = [recognizer translationInView:self.TopView];
+        if ((start.x - end.x) <= 1) {
+            countTop++;
+            if (countTop > 4 ) {
+                self.Winner = @"Top";
+                [self performSegueWithIdentifier:@"MainSegue" sender:nil];
             }
             else
             {
-                yellowRect.origin = CGPointMake(yellowRect.origin.x, yellowRect.origin.y +  10);
-                redRect.origin = CGPointMake(redRect.origin.x, redRect.origin.y +  10);
-                self.ViewYellow.frame = yellowRect;
-                self.ViewRed.frame = redRect;
-                
+               self.TopView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.png",countTop]];  
             }
         }
     }
 }
 
 
-- (void)yellowpan:(UIPanGestureRecognizer *)recognizer
+- (void)bottompan:(UIPanGestureRecognizer *)recognizer
 {
     CGPoint start;
     start.x = 0;
     start.y = 0;
     if (recognizer.state == UIGestureRecognizerStateBegan ) {
-        start = [recognizer translationInView:self.ViewYellow];
+        start = [recognizer translationInView:self.BottomView];
     }
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint end = [recognizer translationInView:self.ViewYellow];
-        if ((start.y - end.y) >= 1) {
-            CGRect yellowRect = self.ViewYellow.frame;
-            CGRect redRect = self.ViewRed.frame;
-            if (yellowRect.origin.y  < 10 ) {
-                self.Winner = @"Yellow";
-                NSLog(@"Segue");
-                [self performSegueWithIdentifier:@"MainSegue" sender:self.Winner];
+        CGPoint end = [recognizer translationInView:self.BottomView];
+        if ((start.x - end.x) <= 1) {
+            countBottom--;
+            if (countBottom < 0 ) {
+                self.Winner = @"Bottom";
+                [self performSegueWithIdentifier:@"MainSegue" sender:nil];
             }
             else
             {
-            yellowRect.origin = CGPointMake(yellowRect.origin.x, yellowRect.origin.y -  10);
-            redRect.origin = CGPointMake(redRect.origin.x, redRect.origin.y -  10);
-            self.ViewYellow.frame = yellowRect;
-                self.ViewRed.frame = redRect;
-
+                self.BottomView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i.png",countBottom]];
             }
         }
     }
 }
  
 
-#define HEIGHT_BOUNDS 504;
+#define HEIGHT_BOUNDS 480;
 #define WIDTH_BOUNDS 320;
+#define HEIGHT_HALF 240;
 -(void) loadViews
 {
-    CGRect yellowRect;
-    yellowRect.size.width = WIDTH_BOUNDS;
-    yellowRect.size.height = HEIGHT_BOUNDS;
-    yellowRect.origin.x = 0;
-    yellowRect.origin.y = 220;
-    self.ViewYellow= [[UIView alloc]initWithFrame:yellowRect];
-    self.ViewYellow.backgroundColor = [UIColor yellowColor];
-   // self.ViewYellow.image = [UIImage imageNamed:@"push-up-exercise-routines.jpg"];
-    [self.view addSubview:self.ViewYellow];
-    CGRect redRect;
-    redRect.size.width = WIDTH_BOUNDS;
-    redRect.size.height = HEIGHT_BOUNDS ;
-    redRect.origin.x = 0;
-    redRect.origin.y = -284;
-    self.ViewRed= [[UIView alloc]initWithFrame:redRect];
-    self.ViewRed.backgroundColor = [UIColor redColor];
-    //self.ViewRed.image = [UIImage imageNamed:@"32851-b.JPG"];
-    [self.view addSubview:self.ViewRed];
-
+    countBottom = 4;
+    countTop = 0;
+    CGRect bottomRect;
+    bottomRect.size.width = WIDTH_BOUNDS;
+    bottomRect.size.height = HEIGHT_BOUNDS;
+    bottomRect.origin.x = 0;
+    bottomRect.origin.y = HEIGHT_HALF;
+    self.BottomView= [[UIImageView alloc]initWithFrame:bottomRect]; 
+    self.BottomView.image = [UIImage imageNamed:@"4.png"];
+    [self.view addSubview:self.BottomView];
+    CGRect topRect;
+    topRect.size.width = WIDTH_BOUNDS;
+    topRect.size.height = HEIGHT_BOUNDS ;
+    topRect.origin.x = 0;
+    topRect.origin.y = -HEIGHT_HALF;
+    self.TopView= [[UIImageView alloc]initWithFrame:topRect];
+    self.TopView.image = [UIImage imageNamed:@"0.png"];
+    [self.view addSubview:self.TopView];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+
 }
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.title = @"MyGame";
     [self loadViews];
     [self addGesture];
 }
@@ -136,8 +132,6 @@
     if ([segue.identifier isEqualToString:@"MainSegue"] ) {
         WinnerViewController *w = segue.destinationViewController;
         w.Winner = self.Winner;
-        w.WinnerLabel.text = self.Winner;
-        self.title =@"Play Again";
     }
 }
 

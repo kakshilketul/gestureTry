@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		184294CA170B75AE00AE9DE6 /* 32851-b.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 184294C8170B75AE00AE9DE6 /* 32851-b.JPG */; };
-		184294CB170B75AE00AE9DE6 /* push-up-exercise-routines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 184294C9170B75AE00AE9DE6 /* push-up-exercise-routines.jpg */; };
+		18564577171148B8009E853D /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18564572171148B8009E853D /* 0.png */; };
+		18564578171148B8009E853D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18564573171148B8009E853D /* 1.png */; };
+		18564579171148B8009E853D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18564574171148B8009E853D /* 2.png */; };
+		1856457A171148B8009E853D /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 18564575171148B8009E853D /* 3.png */; };
+		1856457B171148B8009E853D /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 18564576171148B8009E853D /* 4.png */; };
 		188C0312170B257C0049C189 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C0311170B257C0049C189 /* UIKit.framework */; };
 		188C0314170B257C0049C189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C0313170B257C0049C189 /* Foundation.framework */; };
 		188C0316170B257C0049C189 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C0315170B257C0049C189 /* CoreGraphics.framework */; };
@@ -24,8 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		184294C8170B75AE00AE9DE6 /* 32851-b.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "32851-b.JPG"; sourceTree = "<group>"; };
-		184294C9170B75AE00AE9DE6 /* push-up-exercise-routines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "push-up-exercise-routines.jpg"; sourceTree = "<group>"; };
+		18564572171148B8009E853D /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		18564573171148B8009E853D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		18564574171148B8009E853D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		18564575171148B8009E853D /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		18564576171148B8009E853D /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		188C030E170B257C0049C189 /* gestureTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gestureTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188C0311170B257C0049C189 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		188C0313170B257C0049C189 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185645711711489F009E853D /* NumberedImages */ = {
+			isa = PBXGroup;
+			children = (
+				18564572171148B8009E853D /* 0.png */,
+				18564573171148B8009E853D /* 1.png */,
+				18564574171148B8009E853D /* 2.png */,
+				18564575171148B8009E853D /* 3.png */,
+				18564576171148B8009E853D /* 4.png */,
+			);
+			name = NumberedImages;
+			sourceTree = "<group>";
+		};
 		188C0305170B257C0049C189 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +115,7 @@
 				188C0335170B4A770049C189 /* WinnerViewController.m */,
 				188C032C170B257C0049C189 /* ViewController.h */,
 				188C032D170B257C0049C189 /* ViewController.m */,
-				184294C8170B75AE00AE9DE6 /* 32851-b.JPG */,
-				184294C9170B75AE00AE9DE6 /* push-up-exercise-routines.jpg */,
+				185645711711489F009E853D /* NumberedImages */,
 				188C0318170B257C0049C189 /* Supporting Files */,
 			);
 			path = gestureTry;
@@ -174,8 +191,11 @@
 				188C0326170B257C0049C189 /* Default@2x.png in Resources */,
 				188C0328170B257C0049C189 /* Default-568h@2x.png in Resources */,
 				188C032B170B257C0049C189 /* MainStoryboard.storyboard in Resources */,
-				184294CA170B75AE00AE9DE6 /* 32851-b.JPG in Resources */,
-				184294CB170B75AE00AE9DE6 /* push-up-exercise-routines.jpg in Resources */,
+				18564577171148B8009E853D /* 0.png in Resources */,
+				18564578171148B8009E853D /* 1.png in Resources */,
+				18564579171148B8009E853D /* 2.png in Resources */,
+				1856457A171148B8009E853D /* 3.png in Resources */,
+				1856457B171148B8009E853D /* 4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
