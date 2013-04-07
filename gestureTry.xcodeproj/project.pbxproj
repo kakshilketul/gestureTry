@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184294CA170B75AE00AE9DE6 /* 32851-b.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 184294C8170B75AE00AE9DE6 /* 32851-b.JPG */; };
+		184294CB170B75AE00AE9DE6 /* push-up-exercise-routines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 184294C9170B75AE00AE9DE6 /* push-up-exercise-routines.jpg */; };
 		188C0312170B257C0049C189 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C0311170B257C0049C189 /* UIKit.framework */; };
 		188C0314170B257C0049C189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C0313170B257C0049C189 /* Foundation.framework */; };
 		188C0316170B257C0049C189 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188C0315170B257C0049C189 /* CoreGraphics.framework */; };
@@ -18,9 +20,12 @@
 		188C0328170B257C0049C189 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 188C0327170B257C0049C189 /* Default-568h@2x.png */; };
 		188C032B170B257C0049C189 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188C0329170B257C0049C189 /* MainStoryboard.storyboard */; };
 		188C032E170B257C0049C189 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C032D170B257C0049C189 /* ViewController.m */; };
+		188C0336170B4A770049C189 /* WinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C0335170B4A770049C189 /* WinnerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184294C8170B75AE00AE9DE6 /* 32851-b.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "32851-b.JPG"; sourceTree = "<group>"; };
+		184294C9170B75AE00AE9DE6 /* push-up-exercise-routines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "push-up-exercise-routines.jpg"; sourceTree = "<group>"; };
 		188C030E170B257C0049C189 /* gestureTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gestureTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188C0311170B257C0049C189 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		188C0313170B257C0049C189 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +42,8 @@
 		188C032A170B257C0049C189 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		188C032C170B257C0049C189 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		188C032D170B257C0049C189 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		188C0334170B4A770049C189 /* WinnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinnerViewController.h; sourceTree = "<group>"; };
+		188C0335170B4A770049C189 /* WinnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinnerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +93,12 @@
 				188C0320170B257C0049C189 /* AppDelegate.h */,
 				188C0321170B257C0049C189 /* AppDelegate.m */,
 				188C0329170B257C0049C189 /* MainStoryboard.storyboard */,
+				188C0334170B4A770049C189 /* WinnerViewController.h */,
+				188C0335170B4A770049C189 /* WinnerViewController.m */,
 				188C032C170B257C0049C189 /* ViewController.h */,
 				188C032D170B257C0049C189 /* ViewController.m */,
+				184294C8170B75AE00AE9DE6 /* 32851-b.JPG */,
+				184294C9170B75AE00AE9DE6 /* push-up-exercise-routines.jpg */,
 				188C0318170B257C0049C189 /* Supporting Files */,
 			);
 			path = gestureTry;
@@ -163,6 +174,8 @@
 				188C0326170B257C0049C189 /* Default@2x.png in Resources */,
 				188C0328170B257C0049C189 /* Default-568h@2x.png in Resources */,
 				188C032B170B257C0049C189 /* MainStoryboard.storyboard in Resources */,
+				184294CA170B75AE00AE9DE6 /* 32851-b.JPG in Resources */,
+				184294CB170B75AE00AE9DE6 /* push-up-exercise-routines.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +189,7 @@
 				188C031E170B257C0049C189 /* main.m in Sources */,
 				188C0322170B257C0049C189 /* AppDelegate.m in Sources */,
 				188C032E170B257C0049C189 /* ViewController.m in Sources */,
+				188C0336170B4A770049C189 /* WinnerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +274,15 @@
 		188C0332170B257C0049C189 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manoj Sharma (F5L5ED2D67)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Manoj Sharma (F5L5ED2D67)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gestureTry/gestureTry-Prefix.pch";
 				INFOPLIST_FILE = "gestureTry/gestureTry-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9D3BEB3F-1156-405A-9D8A-4F277750B046";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9D3BEB3F-1156-405A-9D8A-4F277750B046";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,10 +290,15 @@
 		188C0333170B257C0049C189 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manoj Sharma (F5L5ED2D67)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Manoj Sharma (F5L5ED2D67)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gestureTry/gestureTry-Prefix.pch";
 				INFOPLIST_FILE = "gestureTry/gestureTry-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9D3BEB3F-1156-405A-9D8A-4F277750B046";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9D3BEB3F-1156-405A-9D8A-4F277750B046";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +322,7 @@
 				188C0333170B257C0049C189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
